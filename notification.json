@@ -1,0 +1,25 @@
+{
+  "TopicConfigurations": [
+  ],
+  "QueueConfigurations": [
+    {
+      "QueueArn": "arn:aws:sqs:us-east-1:000000000000:test1",
+      "Events": [
+        "s3:ObjectCreated:*"
+      ],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            {
+              "Name": "prefix",
+              "Value": "/"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "LambdaFunctionConfigurations": [
+  ]
+}
+
